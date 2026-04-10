@@ -5,7 +5,7 @@ A small [plumber](https://www.rplumber.io/) REST API for checking whether a CRAN
 The API is deployed on [ricochet](https://ricochet.rs) at `https://dev.vm.ubuntu.ricochet.rs/app/non-api-checks`.
 
 
-![Screenshot of GitHub Action](screenshot.png)
+<img src="screenshot.png" width="500" />
 
 ## Background
 
