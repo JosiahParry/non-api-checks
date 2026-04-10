@@ -1,0 +1,23 @@
+name: Check non-API calls
+
+on:
+  push:
+  schedule:
+    - cron: '0 8 * * *'  # every day at 8am UTC
+  workflow_dispatch:
+
+jobs:
+  check-non-api:
+    runs-on: ubuntu-latest
+    env:
+      PKG_NAME: yourpackage  # <-- change this
+    steps:
+      - name: Check for non-API calls
+        run: |
+          RESPONSE=$(curl -sf "https://dev.vm.ubuntu.ricochet.rs/app/non-api-checks/check?pkg=$PKG_NAME")
+          echo "$RESPONSE" | jq .
+          HAS_NON_API=$(echo "$RESPONSE" | jq -r '.has_non_api_calls')
+          if [ "$HAS_NON_API" = "true" ]; then
+            echo "::error::Non-API calls detected in $PKG_NAME"
+            exit 1
+          fi

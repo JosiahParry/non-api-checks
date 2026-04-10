@@ -1,0 +1,18 @@
+[content]
+id = "01KNW3ZXQ2QVS7KJVH5KJEYPNF"
+name = "CRAN non-API check"
+entrypoint = "plumber.R"
+access_type = "external"
+content_type = "plumber"
+slug = "non-api-checks"
+summary = "Check for non-API usage in daily CRAN package checks."
+
+[language]
+name = "r"
+packages = "renv.lock"
+
+[serve]
+min_instances = 0
+max_instances = 5
+spawn_threshold = 80
+max_connections = 10
