@@ -43,3 +43,4 @@ The workflow runs on push and daily at 8am UTC. If non-API calls are detected it
 - [Writing R Extensions §6.23 — Moving into C API compliance](https://cran.r-project.org/doc/manuals/R-exts.html#Moving-into-C-API-compliance)
 - [CRAN check results](https://cloud.r-project.org/web/checks/)
 - [extendr](https://extendr.rs/)
+- [ricochet](https://ricochet.rs/)

@@ -18,6 +18,6 @@ jobs:
           echo "$RESPONSE" | jq .
           HAS_NON_API=$(echo "$RESPONSE" | jq -r '.has_non_api_calls')
           if [ "$HAS_NON_API" = "true" ]; then
-            echo "::error::Non-API calls detected in $PKG_NAME"
+            echo "::error::non-API calls detected in $PKG_NAME"
             exit 1
           fi
