@@ -5,6 +5,8 @@ A small [plumber](https://www.rplumber.io/) REST API for checking whether a CRAN
 The API is deployed on [ricochet](https://ricochet.rs) at `https://dev.vm.ubuntu.ricochet.rs/app/non-api-checks`.
 
 
+![Screenshot of GitHub Action](screenshot.png)
+
 ## Background
 
 R-core is actively working to clarify and tighten the C API for extending R. As part of this effort, entry points intended for internal use are being removed from installed header files or hidden. Packages that rely on these non-API symbols will break as R evolves.
